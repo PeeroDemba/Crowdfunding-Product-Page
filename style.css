@@ -1,0 +1,1702 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #eee;
+  position: relative;
+  font-family: "Commissioner", sans-serif;
+}
+
+header {
+  background-image: url(./images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 45vh;
+}
+header > div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+}
+header > div #hamburger {
+  display: none;
+}
+header > div #closemenu {
+  display: none;
+}
+header > div #dropdown {
+  display: none;
+}
+header > div .navbar {
+  width: 26%;
+}
+header > div .navbar a {
+  display: inline-block;
+  width: 6rem;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -6rem;
+  margin-bottom: 2.5rem;
+}
+main .mclogo {
+  height: 3rem;
+  width: 3rem;
+}
+main .mclogo img {
+  position: relative;
+  top: -80%;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+}
+main h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+main p {
+  color: #999;
+  font-size: 1.2rem;
+}
+main .topnavs {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+main .topnavs > a {
+  width: 15rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+}
+main .topnavs > a:hover {
+  background-color: hsl(176, 72%, 28%);
+  cursor: pointer;
+}
+main .topnavs .bookmark {
+  display: flex;
+  align-items: center;
+}
+main .topnavs .bookmark button {
+  width: 12rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  border-radius: 3rem;
+  text-align: right;
+  padding-right: 1.7rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 48%);
+  background-color: #eee;
+  border: none;
+  font-weight: 700;
+}
+main .topnavs .bookmark button:hover {
+  cursor: pointer;
+}
+main .topnavs .bookmark #bmlogo {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #333;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.stats {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.stats .numbers {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+.stats .numbers p {
+  color: #999;
+  font-size: 1.2rem;
+}
+.stats .numbers span {
+  color: black;
+  display: block;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.stats .numbers p:nth-child(1) {
+  border-right: 1px solid #eee;
+}
+.stats .numbers p:nth-child(2) {
+  border-right: 1px solid #eee;
+}
+.stats #progressbar {
+  background-color: #eee;
+  height: 0.9rem;
+  border-radius: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.stats #progressbar #progress {
+  width: 89.914%;
+  height: 0.9rem;
+  background-color: hsl(176, 50%, 47%);
+  position: absolute;
+  border-radius: 2rem;
+}
+
+.about {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.about > div {
+  padding: 4rem 4rem 0rem 4rem;
+  width: 100%;
+}
+.about h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.about p {
+  color: #999;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+.about p:nth-child(2) {
+  margin-bottom: 2rem;
+}
+.about .pledge {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about .pledge .pledge1,
+.about .pledge .pledge2,
+.about .pledge .pledge3 {
+  margin: auto;
+  min-height: 22.5rem;
+  padding: 3rem 2.5rem;
+  border: 1px solid #999;
+  border-radius: 0.5rem;
+}
+.about .pledge .pledge1 .pledgename,
+.about .pledge .pledge2 .pledgename,
+.about .pledge .pledge3 .pledgename {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.about .pledge .pledge1 .pledgename p:nth-child(1),
+.about .pledge .pledge2 .pledgename p:nth-child(1),
+.about .pledge .pledge3 .pledgename p:nth-child(1) {
+  color: black;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.about .pledge .pledge1 .pledgename p:nth-child(2),
+.about .pledge .pledge2 .pledgename p:nth-child(2),
+.about .pledge .pledge3 .pledgename p:nth-child(2) {
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+.about .pledge .pledge1 .reward,
+.about .pledge .pledge2 .reward,
+.about .pledge .pledge3 .reward {
+  display: flex;
+  justify-content: space-between;
+}
+.about .pledge .pledge1 .reward p,
+.about .pledge .pledge2 .reward p,
+.about .pledge .pledge3 .reward p {
+  display: flex;
+  align-items: center;
+}
+.about .pledge .pledge1 .reward span,
+.about .pledge .pledge2 .reward span,
+.about .pledge .pledge3 .reward span {
+  color: black;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.about .pledge .pledge1 .reward button,
+.about .pledge .pledge2 .reward button,
+.about .pledge .pledge3 .reward button {
+  width: 14rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+  border-radius: 3.5rem;
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  border: none;
+}
+.about .pledge .pledge1 .reward button:hover,
+.about .pledge .pledge2 .reward button:hover,
+.about .pledge .pledge3 .reward button:hover {
+  background-color: hsl(176, 72%, 28%);
+  cursor: pointer;
+}
+.about .pledge .pledge3 {
+  position: relative;
+  border: 1px solid #eee;
+  margin-bottom: 4rem;
+}
+.about .pledge .pledge3 > .reward > button {
+  background-color: hsl(0, 0%, 48%);
+  color: #eee;
+  border: none;
+}
+.about .pledge .pledge3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#closemodal {
+  position: absolute;
+  width: 1.5rem;
+  top: 5%;
+  left: 92%;
+  color: #999;
+}
+#closemodal:hover {
+  cursor: pointer;
+  color: black;
+}
+
+#modal {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  position: absolute;
+  top: 8%;
+  left: 20%;
+  z-index: 3;
+}
+#modal > div {
+  padding: 3rem 4rem 0rem 4rem;
+  width: 100%;
+}
+#modal h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+#modal p {
+  margin-bottom: 1.5rem;
+  color: #999;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+#modal .pledgemodal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0rem;
+  background-color: white;
+}
+#modal .pledgemodal #pledgemodal1,
+#modal .pledgemodal #pledgemodal2,
+#modal .pledgemodal #pledgemodal3,
+#modal .pledgemodal #pledgemodal4 {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  padding: 2rem 2rem;
+  border: 1px solid #999;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+#modal .pledgemodal #pledgemodal1 .details p:nth-child(3),
+#modal .pledgemodal #pledgemodal2 .details p:nth-child(3),
+#modal .pledgemodal #pledgemodal3 .details p:nth-child(3),
+#modal .pledgemodal #pledgemodal4 .details p:nth-child(3) {
+  display: none;
+}
+#modal .pledgemodal #pledgemodal1 .flex,
+#modal .pledgemodal #pledgemodal2 .flex,
+#modal .pledgemodal #pledgemodal3 .flex,
+#modal .pledgemodal #pledgemodal4 .flex {
+  display: flex;
+  justify-content: space-between;
+}
+#modal .pledgemodal #pledgemodal1 .flex > p,
+#modal .pledgemodal #pledgemodal2 .flex > p,
+#modal .pledgemodal #pledgemodal3 .flex > p,
+#modal .pledgemodal #pledgemodal4 .flex > p {
+  display: block;
+}
+#modal .pledgemodal #pledgemodal1 .flex > div,
+#modal .pledgemodal #pledgemodal2 .flex > div,
+#modal .pledgemodal #pledgemodal3 .flex > div,
+#modal .pledgemodal #pledgemodal4 .flex > div {
+  display: flex;
+  justify-content: flex-start;
+  width: 85%;
+}
+#modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1),
+#modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1),
+#modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1),
+#modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1) {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: black;
+}
+#modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1):hover,
+#modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1):hover,
+#modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1):hover,
+#modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1):hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+#modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(2),
+#modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(2),
+#modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(2),
+#modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(2) {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+#modal .pledgemodal #pledgemodal1 .flex span,
+#modal .pledgemodal #pledgemodal2 .flex span,
+#modal .pledgemodal #pledgemodal3 .flex span,
+#modal .pledgemodal #pledgemodal4 .flex span {
+  font-weight: 700;
+  color: black;
+  font-size: 1.7rem;
+}
+#modal .pledgemodal #pledgemodal1 #checkbox1,
+#modal .pledgemodal #pledgemodal1 #checkbox2,
+#modal .pledgemodal #pledgemodal1 #checkbox3,
+#modal .pledgemodal #pledgemodal1 #checkbox4,
+#modal .pledgemodal #pledgemodal2 #checkbox1,
+#modal .pledgemodal #pledgemodal2 #checkbox2,
+#modal .pledgemodal #pledgemodal2 #checkbox3,
+#modal .pledgemodal #pledgemodal2 #checkbox4,
+#modal .pledgemodal #pledgemodal3 #checkbox1,
+#modal .pledgemodal #pledgemodal3 #checkbox2,
+#modal .pledgemodal #pledgemodal3 #checkbox3,
+#modal .pledgemodal #pledgemodal3 #checkbox4,
+#modal .pledgemodal #pledgemodal4 #checkbox1,
+#modal .pledgemodal #pledgemodal4 #checkbox2,
+#modal .pledgemodal #pledgemodal4 #checkbox3,
+#modal .pledgemodal #pledgemodal4 #checkbox4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  top: 5%;
+}
+#modal .pledgemodal #pledgemodal4 {
+  position: relative;
+  border: 1px solid #eee;
+  margin-bottom: 3rem;
+}
+#modal .pledgemodal #pledgemodal4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#modal .details > p {
+  color: #999;
+}
+#modal #pledgemodal1 .details > p:nth-child(1) {
+  margin-top: 0;
+  color: black;
+  font-weight: 700;
+}
+#modal #pledgemodal1 .details > p:nth-child(1):hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+#modal #pledgemodal1 .details > p:nth-child(2) {
+  margin-top: 1rem;
+  display: block;
+}
+
+#pledgeselected1,
+#pledgeselected2 {
+  grid-column: 1/span 2;
+  border-top: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0%;
+  left: -5%;
+  width: 110%;
+  padding: 4rem 3rem 0 3rem;
+}
+#pledgeselected1 .amount,
+#pledgeselected2 .amount {
+  display: flex;
+  justify-content: space-evenly;
+  width: 45%;
+}
+#pledgeselected1 input,
+#pledgeselected2 input {
+  width: 7rem;
+  height: 4rem;
+  border-radius: 2rem;
+}
+#pledgeselected1 input[type=text],
+#pledgeselected2 input[type=text] {
+  border: 1px solid black;
+  padding: 1.5rem;
+}
+#pledgeselected1 input[type=text]:focus,
+#pledgeselected2 input[type=text]:focus {
+  caret-color: hsl(176, 50%, 47%);
+  outline: 1px solid hsl(176, 50%, 47%);
+  border: none;
+  cursor: pointer;
+}
+#pledgeselected1 input[type=button],
+#pledgeselected2 input[type=button] {
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 1.25rem 0;
+  border: none;
+}
+#pledgeselected1 input[type=button]:hover,
+#pledgeselected2 input[type=button]:hover {
+  background-color: hsl(176, 72%, 28%);
+  cursor: pointer;
+}
+
+#greencircle1,
+#greencircle2,
+#greencircle3 {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 17%;
+  display: none;
+}
+
+#success {
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 3rem;
+  position: absolute;
+  top: 20%;
+  left: 30.5%;
+  z-index: 3;
+}
+#success img {
+  margin: auto;
+  width: 6rem;
+}
+#success h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 3rem 0 2rem 0;
+}
+#success p {
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  color: #999;
+  margin-bottom: 2.5rem;
+}
+#success button {
+  width: 8rem;
+  height: 4rem;
+  border: none;
+  border-radius: 3rem;
+  text-align: center;
+  margin: auto;
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 1.45rem 0;
+}
+#success button:hover {
+  background-color: hsl(176, 72%, 28%);
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  header {
+    background-image: url(./images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+  }
+  header > div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+  }
+  header > div .navbar {
+    width: 33%;
+  }
+  header > div .navbar a {
+    display: inline-block;
+    width: 6rem;
+    text-decoration: none;
+    color: white;
+  }
+  main {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -6rem;
+    margin-bottom: 2.5rem;
+  }
+  .stats {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .about {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  #modal {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    z-index: 3;
+  }
+  #success {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 3rem;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 3;
+  }
+}
+@media (max-width: 1023px) {
+  header {
+    background-image: url(./images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+  }
+  header > div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+  }
+  header > div .navbar {
+    width: 37%;
+  }
+  header > div .navbar a {
+    display: inline-block;
+    width: 6rem;
+    text-decoration: none;
+    color: white;
+  }
+  main {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -6rem;
+    margin-bottom: 2.5rem;
+  }
+  .stats {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .stats .numbers {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .about {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  #modal {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    z-index: 3;
+  }
+  #pledgeselected1 .amount,
+  #pledgeselected2 .amount {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+  #success {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 3rem;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 3;
+  }
+}
+@media (max-width: 895px) {
+  header > div .navbar {
+    width: 43%;
+  }
+  header > div .navbar a {
+    display: inline-block;
+    width: 6rem;
+    text-decoration: none;
+    color: white;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    height: 50vh;
+    background-image: url(./images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center top 0%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  header > div {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+  }
+  header > div #hamburger {
+    display: block;
+  }
+  header > div #closemenu {
+    z-index: 3;
+  }
+  header > div #dropdown {
+    position: absolute;
+    background-color: white;
+    z-index: 3;
+    width: 85%;
+    top: 8rem;
+    border-radius: 0.5rem;
+  }
+  header > div #dropdown a {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  header > div #dropdown a:nth-child(2) {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+  header > div .navbar {
+    display: none;
+  }
+  header > div .navbar a {
+    display: inline-block;
+    width: 5rem;
+    text-decoration: none;
+    color: white;
+  }
+  main {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  main .mclogo {
+    height: 3rem;
+    width: 3rem;
+  }
+  main .mclogo img {
+    position: relative;
+    top: -110%;
+    left: -20%;
+    height: 5rem;
+    width: 5rem;
+  }
+  main h1 {
+    padding: 0 0.5rem;
+  }
+  main p {
+    line-height: 2rem;
+    padding: 0 0.5rem;
+  }
+  main .topnavs {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  main .topnavs .bookmark {
+    display: flex;
+    align-items: center;
+  }
+  main .topnavs .bookmark #bmlogo {
+    top: 0;
+    left: 0;
+  }
+  main .topnavs .bookmark button {
+    display: none;
+  }
+  .stats {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+  .stats .numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0 5rem;
+  }
+  .stats .numbers p:nth-child(1) {
+    border-bottom: 1px solid #eee;
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+  .stats .numbers p:nth-child(2) {
+    border-bottom: 1px solid #eee;
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+  .stats #progressbar {
+    background-color: #eee;
+    height: 0.9rem;
+    border-radius: 2rem;
+    position: relative;
+    width: 100%;
+  }
+  .stats #progressbar #progress {
+    width: 89.914%;
+    height: 0.9rem;
+    background-color: hsl(176, 50%, 47%);
+    position: absolute;
+    border-radius: 2rem;
+    top: 0;
+    left: 0;
+  }
+  .about {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .about > div {
+    padding: 2rem 0rem 0rem 0rem;
+    width: 100%;
+  }
+  .about h2 {
+    margin-top: 2rem;
+  }
+  .about p {
+    color: #999;
+  }
+  .about p:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+  .about .pledge {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about .pledge .pledge1,
+  .about .pledge .pledge2,
+  .about .pledge .pledge3 {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+  }
+  .about .pledge .pledge1 .pledgename,
+  .about .pledge .pledge2 .pledgename,
+  .about .pledge .pledge3 .pledgename {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .about .pledge .pledge1 .pledgename p:nth-child(1),
+  .about .pledge .pledge2 .pledgename p:nth-child(1),
+  .about .pledge .pledge3 .pledgename p:nth-child(1) {
+    color: black;
+    font-weight: 700;
+  }
+  .about .pledge .pledge1 .pledgename p:nth-child(2),
+  .about .pledge .pledge2 .pledgename p:nth-child(2),
+  .about .pledge .pledge3 .pledgename p:nth-child(2) {
+    color: hsl(176, 50%, 47%);
+  }
+  .about .pledge .pledge1 .reward,
+  .about .pledge .pledge2 .reward,
+  .about .pledge .pledge3 .reward {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about .pledge .pledge1 .reward p,
+  .about .pledge .pledge2 .reward p,
+  .about .pledge .pledge3 .reward p {
+    display: flex;
+    align-items: center;
+  }
+  .about .pledge .pledge1 .reward span,
+  .about .pledge .pledge2 .reward span,
+  .about .pledge .pledge3 .reward span {
+    color: black;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .about .pledge .pledge1 .reward button,
+  .about .pledge .pledge2 .reward button,
+  .about .pledge .pledge3 .reward button {
+    width: 13rem;
+    height: 4.5rem;
+    border-radius: 3rem;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    border: none;
+    margin-top: 2rem;
+  }
+  .about .pledge .pledge1 .reward button:hover,
+  .about .pledge .pledge2 .reward button:hover,
+  .about .pledge .pledge3 .reward button:hover {
+    background-color: hsl(176, 72%, 28%);
+    cursor: pointer;
+  }
+  .about .pledge .pledge3 {
+    position: relative;
+    border: 1px solid #eee;
+    margin-bottom: 4rem;
+  }
+  .about .pledge .pledge3 > .reward > button {
+    background-color: hsl(0, 0%, 48%);
+    color: #eee;
+    border: none;
+  }
+  .about .pledge .pledge3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  #closemodal {
+    position: absolute;
+    width: 1.5rem;
+    top: 3%;
+    left: 90%;
+  }
+  #modal {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    z-index: 3;
+  }
+  #modal > div {
+    padding: 3rem 1rem 0rem 1rem;
+    width: 100%;
+  }
+  #modal h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  #modal > p {
+    margin-bottom: 1rem;
+    color: #999;
+  }
+  #modal .pledgemodal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    background-color: white;
+    margin-bottom: 3rem;
+  }
+  #modal .pledgemodal #pledgemodal1,
+  #modal .pledgemodal #pledgemodal2,
+  #modal .pledgemodal #pledgemodal3,
+  #modal .pledgemodal #pledgemodal4 {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  #modal .pledgemodal #pledgemodal1 #checkbox1,
+  #modal .pledgemodal #pledgemodal1 #checkbox2,
+  #modal .pledgemodal #pledgemodal1 #checkbox3,
+  #modal .pledgemodal #pledgemodal1 #checkbox4,
+  #modal .pledgemodal #pledgemodal2 #checkbox1,
+  #modal .pledgemodal #pledgemodal2 #checkbox2,
+  #modal .pledgemodal #pledgemodal2 #checkbox3,
+  #modal .pledgemodal #pledgemodal2 #checkbox4,
+  #modal .pledgemodal #pledgemodal3 #checkbox1,
+  #modal .pledgemodal #pledgemodal3 #checkbox2,
+  #modal .pledgemodal #pledgemodal3 #checkbox3,
+  #modal .pledgemodal #pledgemodal3 #checkbox4,
+  #modal .pledgemodal #pledgemodal4 #checkbox1,
+  #modal .pledgemodal #pledgemodal4 #checkbox2,
+  #modal .pledgemodal #pledgemodal4 #checkbox3,
+  #modal .pledgemodal #pledgemodal4 #checkbox4 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: relative;
+    top: 2%;
+  }
+  #modal .pledgemodal #pledgemodal1 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal2 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal3 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal4 .details p:nth-child(3) {
+    display: block;
+  }
+  #modal .pledgemodal #pledgemodal1 span,
+  #modal .pledgemodal #pledgemodal2 span,
+  #modal .pledgemodal #pledgemodal3 span,
+  #modal .pledgemodal #pledgemodal4 span {
+    font-weight: 700;
+    color: black;
+    font-size: 2rem;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex,
+  #modal .pledgemodal #pledgemodal2 .flex,
+  #modal .pledgemodal #pledgemodal3 .flex,
+  #modal .pledgemodal #pledgemodal4 .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > p,
+  #modal .pledgemodal #pledgemodal2 .flex > p,
+  #modal .pledgemodal #pledgemodal3 .flex > p,
+  #modal .pledgemodal #pledgemodal4 .flex > p {
+    display: none;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div,
+  #modal .pledgemodal #pledgemodal2 .flex > div,
+  #modal .pledgemodal #pledgemodal3 .flex > div,
+  #modal .pledgemodal #pledgemodal4 .flex > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1) {
+    font-weight: 700;
+    margin-bottom: 0rem;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1):hover {
+    color: hsl(176, 50%, 47%);
+    cursor: pointer;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(2) {
+    margin-left: 0;
+    color: hsl(176, 50%, 47%);
+  }
+  #modal .pledgemodal #pledgemodal1 .flex span,
+  #modal .pledgemodal #pledgemodal2 .flex span,
+  #modal .pledgemodal #pledgemodal3 .flex span,
+  #modal .pledgemodal #pledgemodal4 .flex span {
+    font-weight: 700;
+    color: black;
+  }
+  #pledgeselected1,
+  #pledgeselected2 {
+    grid-column: 1/span 2;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0%;
+    left: -4%;
+    width: 108%;
+    padding: 1rem;
+  }
+  #pledgeselected1 .amount,
+  #pledgeselected2 .amount {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 0rem;
+  }
+  #success {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 3;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    height: 50vh;
+    background-image: url(./images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center top 0%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  header > div {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+  }
+  header > div #hamburger {
+    display: block;
+  }
+  header > div #closemenu {
+    z-index: 3;
+  }
+  header > div .navbar {
+    display: none;
+  }
+  header > div .navbar a {
+    display: inline-block;
+    width: 5rem;
+    text-decoration: none;
+    color: white;
+  }
+  main {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  main .mclogo {
+    height: 3rem;
+    width: 3rem;
+  }
+  main .mclogo img {
+    position: relative;
+    top: -110%;
+    left: -20%;
+    height: 5rem;
+    width: 5rem;
+  }
+  main h1 {
+    padding: 0 0.5rem;
+    font-size: 1.7rem;
+  }
+  main p {
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
+  main .topnavs {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  main .topnavs > a {
+    width: 12rem;
+  }
+  main .topnavs .bookmark {
+    display: flex;
+    align-items: center;
+  }
+  main .topnavs .bookmark button {
+    display: none;
+  }
+  main .topnavs .bookmark img {
+    width: 4rem;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .stats {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+  .stats .numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0 5rem;
+  }
+  .stats .numbers p:nth-child(1) {
+    border-bottom: 1px solid #eee;
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+  .stats .numbers p:nth-child(2) {
+    border-bottom: 1px solid #eee;
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+  .stats #progressbar {
+    background-color: #eee;
+    height: 0.9rem;
+    border-radius: 2rem;
+    position: relative;
+    left: 5%;
+    width: 90%;
+  }
+  .stats #progressbar #progress {
+    width: 89.914%;
+    height: 0.9rem;
+    background-color: hsl(176, 50%, 47%);
+    position: absolute;
+    border-radius: 2rem;
+    top: 0;
+    left: 0;
+  }
+  .about {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .about > div {
+    padding: 2rem 0rem 0rem 0rem;
+    width: 100%;
+  }
+  .about h2 {
+    margin-top: 0rem;
+  }
+  .about p {
+    color: #999;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .about p:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+  .about .pledge {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about .pledge .pledge1,
+  .about .pledge .pledge2,
+  .about .pledge .pledge3 {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  .about .pledge .pledge1 .pledgename,
+  .about .pledge .pledge2 .pledgename,
+  .about .pledge .pledge3 .pledgename {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .about .pledge .pledge1 .pledgename p:nth-child(1),
+  .about .pledge .pledge2 .pledgename p:nth-child(1),
+  .about .pledge .pledge3 .pledgename p:nth-child(1) {
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .about .pledge .pledge1 .pledgename p:nth-child(2),
+  .about .pledge .pledge2 .pledgename p:nth-child(2),
+  .about .pledge .pledge3 .pledgename p:nth-child(2) {
+    color: hsl(176, 50%, 47%);
+  }
+  .about .pledge .pledge1 .reward,
+  .about .pledge .pledge2 .reward,
+  .about .pledge .pledge3 .reward {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about .pledge .pledge1 .reward p,
+  .about .pledge .pledge2 .reward p,
+  .about .pledge .pledge3 .reward p {
+    display: flex;
+    align-items: center;
+  }
+  .about .pledge .pledge1 .reward span,
+  .about .pledge .pledge2 .reward span,
+  .about .pledge .pledge3 .reward span {
+    color: black;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .about .pledge .pledge1 .reward button,
+  .about .pledge .pledge2 .reward button,
+  .about .pledge .pledge3 .reward button {
+    width: 11rem;
+    height: 3.5rem;
+    border-radius: 3rem;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  .about .pledge .pledge1 .reward button:hover,
+  .about .pledge .pledge2 .reward button:hover,
+  .about .pledge .pledge3 .reward button:hover {
+    background-color: hsl(176, 72%, 28%);
+    cursor: pointer;
+  }
+  .about .pledge .pledge3 {
+    position: relative;
+    border: 1px solid #eee;
+    margin-bottom: 4rem;
+  }
+  .about .pledge .pledge3 > .reward > button {
+    background-color: hsl(0, 0%, 48%);
+    color: #eee;
+    border: none;
+  }
+  .about .pledge .pledge3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  #closemodal {
+    position: absolute;
+    width: 1.5rem;
+    top: 3%;
+    left: 88%;
+  }
+  #modal {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    z-index: 3;
+  }
+  #modal > div {
+    padding: 3rem 0.5rem 0rem 0.5rem;
+    width: 100%;
+  }
+  #modal h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  #modal p {
+    margin-bottom: 1.5rem;
+    color: #999;
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+  #modal .pledgemodal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    background-color: white;
+    margin-bottom: 3rem;
+  }
+  #modal .pledgemodal #pledgemodal1,
+  #modal .pledgemodal #pledgemodal2,
+  #modal .pledgemodal #pledgemodal3,
+  #modal .pledgemodal #pledgemodal4 {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    gap: 0.3rem;
+  }
+  #modal .pledgemodal #pledgemodal1 #checkbox1,
+  #modal .pledgemodal #pledgemodal1 #checkbox2,
+  #modal .pledgemodal #pledgemodal1 #checkbox3,
+  #modal .pledgemodal #pledgemodal1 #checkbox4,
+  #modal .pledgemodal #pledgemodal2 #checkbox1,
+  #modal .pledgemodal #pledgemodal2 #checkbox2,
+  #modal .pledgemodal #pledgemodal2 #checkbox3,
+  #modal .pledgemodal #pledgemodal2 #checkbox4,
+  #modal .pledgemodal #pledgemodal3 #checkbox1,
+  #modal .pledgemodal #pledgemodal3 #checkbox2,
+  #modal .pledgemodal #pledgemodal3 #checkbox3,
+  #modal .pledgemodal #pledgemodal3 #checkbox4,
+  #modal .pledgemodal #pledgemodal4 #checkbox1,
+  #modal .pledgemodal #pledgemodal4 #checkbox2,
+  #modal .pledgemodal #pledgemodal4 #checkbox3,
+  #modal .pledgemodal #pledgemodal4 #checkbox4 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: relative;
+    top: 2%;
+  }
+  #modal .pledgemodal #pledgemodal1 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal2 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal3 .details p:nth-child(3),
+  #modal .pledgemodal #pledgemodal4 .details p:nth-child(3) {
+    display: block;
+  }
+  #modal .pledgemodal #pledgemodal1 span,
+  #modal .pledgemodal #pledgemodal2 span,
+  #modal .pledgemodal #pledgemodal3 span,
+  #modal .pledgemodal #pledgemodal4 span {
+    font-weight: 700;
+    color: black;
+    font-size: 2rem;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex,
+  #modal .pledgemodal #pledgemodal2 .flex,
+  #modal .pledgemodal #pledgemodal3 .flex,
+  #modal .pledgemodal #pledgemodal4 .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > p,
+  #modal .pledgemodal #pledgemodal2 .flex > p,
+  #modal .pledgemodal #pledgemodal3 .flex > p,
+  #modal .pledgemodal #pledgemodal4 .flex > p {
+    display: none;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div,
+  #modal .pledgemodal #pledgemodal2 .flex > div,
+  #modal .pledgemodal #pledgemodal3 .flex > div,
+  #modal .pledgemodal #pledgemodal4 .flex > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1),
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1) {
+    font-weight: 700;
+    margin-bottom: 0rem;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(1):hover,
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(1):hover {
+    color: hsl(176, 50%, 47%);
+    cursor: pointer;
+  }
+  #modal .pledgemodal #pledgemodal1 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal2 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal3 .flex > div p:nth-child(2),
+  #modal .pledgemodal #pledgemodal4 .flex > div p:nth-child(2) {
+    margin-left: 0;
+    color: hsl(176, 50%, 47%);
+  }
+  #modal .pledgemodal #pledgemodal1 .flex span,
+  #modal .pledgemodal #pledgemodal2 .flex span,
+  #modal .pledgemodal #pledgemodal3 .flex span,
+  #modal .pledgemodal #pledgemodal4 .flex span {
+    font-weight: 700;
+    color: black;
+  }
+  #modal #pledgemodal1 .details > p:nth-child(1) {
+    margin-top: 0;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  #pledgeselected1,
+  #pledgeselected2 {
+    grid-column: 1/span 2;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0%;
+    left: -4%;
+    width: 108%;
+    padding: 1rem;
+  }
+  #pledgeselected1 .amount,
+  #pledgeselected2 .amount {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0rem;
+  }
+  #success {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 3;
+    padding: 2rem 1.2rem;
+  }
+  #success p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
